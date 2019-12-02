@@ -1,0 +1,2 @@
+class Leader < ApplicationRecord
+end
