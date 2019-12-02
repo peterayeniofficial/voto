@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_173531) do
+ActiveRecord::Schema.define(version: 2019_12_02_173146) do
+
 
   create_table "comments", force: :cascade do |t|
     t.integer "party_id"
@@ -22,6 +23,17 @@ ActiveRecord::Schema.define(version: 2019_12_02_173531) do
 
   create_table "councils", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "parties", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.string "year"
+    t.string "twitter"
+    t.text "manifesto"
+    t.text "pitch"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
