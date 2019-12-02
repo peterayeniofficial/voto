@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_12_02_173146) do
 
+
   create_table "comments", force: :cascade do |t|
     t.integer "party_id"
     t.integer "user_id"
@@ -45,6 +46,13 @@ ActiveRecord::Schema.define(version: 2019_12_02_173146) do
     t.string "gender"
     t.string "password_digest"
     t.integer "council_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "votings", force: :cascade do |t|
+    t.integer "party_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
