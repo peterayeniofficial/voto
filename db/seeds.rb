@@ -245,7 +245,7 @@ parties=Party.create([
         
         Please support a majority Conservative Government so our country can move on instead of going backwards.",
         pitch:"Get Brexit Done",
-        logo:"https://en.wikipedia.org/wiki/Conservative_Party_(UK)#/media/File:Conservative_logo_2006.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Conservative_logo_2006.svg/1920px-Conservative_logo_2006.svg.png"
     },
     {
         name:"Labour Party",
@@ -261,7 +261,7 @@ parties=Party.create([
         Our manifesto sets out how a Labour government will deliver the transformative change Britain needs.
         Labour is on your side. Jump in and find out more.",
         pitch: "An Equal Society",
-        logo: "https://en.wikipedia.org/wiki/Labour_Party_(UK)#/media/File:Logo_Labour_Party.svg"
+        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Logo_Labour_Party.svg/1920px-Logo_Labour_Party.svg.png"
     },
     {
         name: "Liberal Democrats",
@@ -270,7 +270,7 @@ parties=Party.create([
         twitter:"https://twitter.com/LibDems",
         manifesto:"Stop Brexit and invest the £50 billion Remain Bonus in public services and tackling inequality. Tackle the climate emergency:Tackle the climate emergency by generating 80% of our electricity from renewables by 2030 and insulating all low-income homes by 2025. Give every child the best start in life:Give every child the best start in life by recruiting 20,000 more teachers as part of an extra £10 billion a year for schools. Build a fairer economy:Build a fairer economy by providing free childcare from 9 months and giving every adult £10,000 to spend on skills & training throughout their lives. Transform our mental health services:Transform our mental health services by treating mental health with the same urgency as physical health.",
         pitch:"Stop Brexit. Build a brighter future",
-        logo:"https://en.wikipedia.org/wiki/Liberal_Democrats_(UK)#/media/File:Liberal_Democrats_logo.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Liberal_Democrats_logo.svg/1920px-Liberal_Democrats_logo.svg.png"
     },
     {
         name:"Green Party",
@@ -284,7 +284,7 @@ parties=Party.create([
         Looking after nature and the countryside • Being fair to everyone 
         Helping everyone to live good lives, not just make more money ",
         pitch:"When Greens vote, Greens win",
-        logo: "https://en.wikipedia.org/wiki/Green_Party_of_England_and_Wales#/media/File:Green_Party_of_England_and_Wales_logo.svg"
+        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Green_Party_of_England_and_Wales_logo.svg/800px-Green_Party_of_England_and_Wales_logo.svg.png"
     },
     {
         name:"Braxit Party",
@@ -297,7 +297,7 @@ parties=Party.create([
         A Clean-Break Brexit can also shape the future of our economy and society. It will give us the freedom to shape our future by taking immediate control of our own laws, borders, money, fishing and defence.
         We want to cancel HS2, save 50% of the foreign aid budget and save another £13bn a year in payments to the EU. That money can form part of a Brexit dividend to invest billions in Britain's Regions, cut the cost of living, and build a better future for millions of our people.",
         pitch:"we are ready to change politics for good.",
-        logo:"https://en.wikipedia.org/wiki/Brexit_Party#/media/File:Brexit_Party.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Brexit_Party.svg/1024px-Brexit_Party.svg.png"
     },
     {
         name:"Scottish National Party",
@@ -307,7 +307,7 @@ parties=Party.create([
         manifesto:"Our Vision,
         The SNP is committed to making Scotland the nation we know it can be. Our vision is of a prosperous country where everyone gets the chance to fulfil their potential. We want a fair society where no-one is left behind.",
         pitch:"It's time to choose our own future",
-        logo:"https://en.wikipedia.org/wiki/Scottish_National_Party#/media/File:Scottish_National_Party_logo_2016.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Scottish_National_Party_logo_2016.svg/1920px-Scottish_National_Party_logo_2016.svg.png"
     },
     {
         name:"Plaid Cymru",
@@ -322,7 +322,7 @@ parties=Party.create([
         While Westminster politicians are deadlocked over Brexit, Wales is being left behind. It's time for change in Wales.
         It's time to vote Plaid Cymru.",
         pitch: "Ni yw Cymru | Wales, it's us. Ymunwch",
-        logo:"https://en.wikipedia.org/wiki/Plaid_Cymru#/media/File:Plaid_Cymru_logo.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Plaid_Cymru_logo.svg/1920px-Plaid_Cymru_logo.svg.png"
     },
     {
         name:"Democratic Unionist Party",
@@ -337,7 +337,7 @@ parties=Party.create([
         While Westminster politicians are deadlocked over Brexit, Wales is being left behind. It's time for change in Wales.
         It's time to vote Plaid Cymru.",
         pitch:"The party for Northern Ireland",
-        logo:"https://en.wikipedia.org/wiki/Democratic_Unionist_Party#/media/File:Democratic_Unionist_Party_logo.svg"
+        logo:"https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Democratic_Unionist_Party_logo.svg/1920px-Democratic_Unionist_Party_logo.svg.png"
     }
 ])
 
@@ -350,7 +350,7 @@ leaders = Leader.create(
             website: "https://www.joswinson.org.uk/
             ",
             party_id: 3,
-            picture: "https://en.wikipedia.org/wiki/Jo_Swinson#/media/File:Official_portrait_of_Jo_Swinson_crop_2.jpg"
+            picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Official_portrait_of_Jo_Swinson_crop_2.jpg/800px-Official_portrait_of_Jo_Swinson_crop_2.jpg"
         },
 
         {
@@ -358,7 +358,7 @@ leaders = Leader.create(
             bio: "Alexander Boris de Pfeffel Johnson Hon FRIBA is a British politician, writer, and former journalist who has served as prime minister of the United Kingdom and leader of the Conservative Party since July 2019.",
             website: "http://www.boris-johnson.com/",
             party_id: 1,
-            picture: "https://simple.wikipedia.org/wiki/Boris_Johnson#/media/File:Boris_Johnson_official_portrait_(cropped).jpg"
+            picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Boris_Johnson_official_portrait_%28cropped%29.jpg/800px-Boris_Johnson_official_portrait_%28cropped%29.jpg"
         },
 
         {
@@ -366,7 +366,7 @@ leaders = Leader.create(
             bio: "Jeremy Bernard Corbyn is a British politician serving as Leader of the Labour Party and Leader of the Opposition since 2015. Corbyn has been the Member of Parliament for Islington North since 1983. Ideologically, he identifies as a democratic socialist.",
             website: "http://www.jeremycorbyn.org.uk/",
             party_id: 2,
-            picture: "https://en.wikipedia.org/wiki/Jeremy_Corbyn#/media/File:Jeremy_Corbyn_closeup.jpg"
+            picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jeremy_Corbyn_closeup.jpg/800px-Jeremy_Corbyn_closeup.jpg"
         }
     ]
    )
