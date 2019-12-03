@@ -10,8 +10,20 @@
 
       <%= f.label :email %>
       <%= f.email_field :email %>
+      
       <%= f.label :dob %>
       <%= f.date_field :dob %>
+
+      <%= f.label :gender %>
+      <%= f.radio_button(:gender, 'Female') %>
+      <%= f.label('Female') %>
+      <%= f.radio_button(:gender, 'Male') %>
+      <%= f.label('Male') %>
+      <%= f.radio_button(:gender, 'Other') %>
+      <%= f.label('Other') %>
+
+      <%= f.label :region %>
+      <%= f.text_field :region %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>

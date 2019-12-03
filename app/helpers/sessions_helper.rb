@@ -10,5 +10,9 @@ module SessionsHelper
             flash[:notice]="You need to be logged in to access this feature."
             redirect_to "/"
         end 
-    end 
+    end
+
+    def log_in(user)
+        session[:user_id] = user.id
+    end
 end
