@@ -340,3 +340,33 @@ parties=Party.create([
         logo:"https://en.wikipedia.org/wiki/Democratic_Unionist_Party#/media/File:Democratic_Unionist_Party_logo.svg"
     }
 ])
+
+leaders = Leader.create(
+    [
+        {
+            name: "Jo Swinson",
+            bio: "Joanne Kate Swinson CBE is a British politician who has served as Leader of the Liberal Democrats since 2019. She is the first woman and the youngest person to hold the position. She has been the Member of Parliament for East Dunbartonshire since 2017, having previously held the seat between 2005 and 2015.
+            ",
+            website: "https://www.joswinson.org.uk/
+            ",
+            party_id: 3,
+            picture: "https://en.wikipedia.org/wiki/Jo_Swinson#/media/File:Official_portrait_of_Jo_Swinson_crop_2.jpg"
+        },
+
+        {
+            name: "Boris Johnson",
+            bio: "Alexander Boris de Pfeffel Johnson Hon FRIBA is a British politician, writer, and former journalist who has served as prime minister of the United Kingdom and leader of the Conservative Party since July 2019.",
+            website: "http://www.boris-johnson.com/",
+            party_id: 1,
+            picture: "https://simple.wikipedia.org/wiki/Boris_Johnson#/media/File:Boris_Johnson_official_portrait_(cropped).jpg"
+        },
+
+        {
+            name: "Jeremy Corbyn ",
+            bio: "Jeremy Bernard Corbyn is a British politician serving as Leader of the Labour Party and Leader of the Opposition since 2015. Corbyn has been the Member of Parliament for Islington North since 1983. Ideologically, he identifies as a democratic socialist.",
+            website: "http://www.jeremycorbyn.org.uk/",
+            party_id: 2,
+            picture: "https://en.wikipedia.org/wiki/Jeremy_Corbyn#/media/File:Jeremy_Corbyn_closeup.jpg"
+        }
+    ]
+   )
