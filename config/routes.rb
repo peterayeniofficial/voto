@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :parties, only: [:index, :show]
   post "/parties/:id", to: "parties#vote", as: "vote_party"
+  post "/comments", to:"comments#create", as:"comment"
+
+  
 
   get "/insight", to:"static_pages#insight", as:"insight"
   get '/login', to:"sessions#new"
