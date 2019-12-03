@@ -14,4 +14,12 @@ class User < ApplicationRecord
     validates :dob, presence: true
     validates :gender, presence: true
     has_secure_password
+
+    validate :validate_age
+
+    def validate_age
+        if dob.present? && dob > 16.years.ago
+            errors.add(:birth_date, 'You should be over 16 years old.')
+        end
+    end
 end
