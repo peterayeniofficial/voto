@@ -1,0 +1,10 @@
+<h1> Welcome back! <br>
+Please log in with your email address and password</h1> 
+<br>
+<%=form_with(url: "sessions#create", method: "post") do |f|%>
+    <%=f.label :email%><br>
+    <%=f.text_field "user[email]"%><br><br>
+    <%=f.label :password%><br>
+    <%=f.password_field "user[password]"%><br><br>
+    <%=f.submit "Login"%>
+<%end%>
