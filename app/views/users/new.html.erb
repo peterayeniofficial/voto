@@ -23,7 +23,7 @@
       <%= f.label('Other') %>
 
       <%= f.label :region %>
-      <%= f.text_field :region %>
+      <%= f.collection_select(:council_id, Council.all, :id, :name, prompt: true ) %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>
