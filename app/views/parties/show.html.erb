@@ -1,0 +1,11 @@
+<h1> <%=@party.name%></h1>
+<h2> <%= @party.pitch%></h2>
+<br> 
+<%=link_to vote_party_path ,"Vote for this party"%>
+
+Founded: <%= @party.year%><br>
+<%=link_to @party.website, "Web"%><br>
+<%=link_to @party.twitter, "Twitter"%><br>
+<h3> Manifesto for 2019 Decemeber Election</h3><br>
+<%=@party.manifesto%>
+
