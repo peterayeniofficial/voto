@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
             redirect_to parties_path
         else
             flash[:notice]= "Sorry, we can't find a user with that email and password. Please try again"
-            redirect_to new_login_path
+            redirect_to login_path
         end
     end
 

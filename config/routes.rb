@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#index', as: "static"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
-  resources :users
+  resources :users, except: [:index]
 
   resources :parties, only: [:index, :show]
   post "/parties/:id", to: "parties#vote", as: "vote_party"

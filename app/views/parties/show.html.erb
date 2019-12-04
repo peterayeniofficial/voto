@@ -33,50 +33,43 @@
             <div class="col-md-8 col-xl-9">
                 <h3> Manifesto for 2019 Decemeber Election</h3><br>
                 <p><%=@party.manifesto%></p>
-                <%=link_to "Vote for this party", vote_party_path, class: 'btn btn-block btn-round btn-success mt-3'%>
-                <p>Note you can only vote once and for one party only</p>
+                <hr>
+                <% unless current_user.voting %>
+                  <%=link_to "Vote for this party", vote_party_path, method: :post, class: 'btn btn-block btn-round btn-success mt-3'%>
+                  <p>Note you can only vote once and for one party only</p>
+                <% end %>
+                <h4>Result: <%= pluralize(@party.total_vote, 'Vote' ) %> from <%= Voting.all.count %> total</h4>
                 <br><br>
-                Leave a comment: 
+                <p>Leave a comment: </p>
+                  
                 <%=form_with(url: "/comments", method: :post) do |f| %>
                     <div class="form-group">
-                        <%= f.text_area :text, class: 'form-control' %>
+                        <%= f.text_area :text, class: 'form-control', required: true%>
                      </div>
+                     <%= hidden_field_tag 'party_id', @party.id %>
                      <div class="form-group">
                         <%= f.submit "Comment", class: "btn btn-block btn-danger" %>
                     </div>
                 <%end%>
 
-</div>
+                <hr>
+                <h3>Recent Comments</h3>
+                <% if @party.comments.empty? %>
+                  <p>There are currently no comment for this party manifesto, be the first to leave a comment.</p>
+                <% else %>
+                  <% @party.comments.each do |comment| %>
+                    <p><%= comment.text %></p>
+                    <p>By: <%= comment.user.first_name %> | Posted: <%= time_ago_in_words(comment.created_at) %> ago.</p>
+                    <hr>
+                  <% end%>
+                <% end %>
+
+            </div>
 
             <div class="col-md-4 col-xl-3">
               <div class="sidebar px-4 py-md-0">
 
-                <h6 class="sidebar-title">Latest Comments</h6>
-               
-
-                <hr>
-
-
-                <h6 class="sidebar-title">In the News</h6>
-                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/4.jpg">
-                  <p class="media-body small-2 lh-4 mb-0">Thank to Maryam for joining our team</p>
-                </a>
-
-                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/3.jpg">
-                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
-                </a>
-
-                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/5.jpg">
-                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
-                </a>
-
-                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/2.jpg">
-                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
-                </a>
+                <a class="twitter-timeline" href="https://twitter.com/thePeterAyeni/timelines/1202201162386198530?ref_src=twsrc%5Etfw">UK Election 2019 - Curated tweets by thePeterAyeni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
                 <hr>
 
