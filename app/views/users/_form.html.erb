@@ -1,13 +1,7 @@
-<%= render '/layouts/home-nav'%>
-<section class="sign-up-page section bg-img h-100">
-<div class="container">
-  <!-- Main Content -->
-<main class="main-content layout-centered">
+<div class="bg-white rounded shadow-7 w-400 mw-100 p-6">
+        <h5 class="mb-7">Edit your details</h5>
 
-      <div class="bg-white rounded shadow-7 w-400 mw-100 p-6">
-        <h5 class="mb-7">Sign Up</h5>
-
-        <%= form_with(url: users_path, model: @user, local: true) do |f| %>
+        <%= form_with(url: users_path, model: @user, method: 'post', local: true) do |f| %>
           <div class="form-group">
             <%= f.text_field :first_name, class: 'form-control', placeholder: :first_name %>
           </div>
@@ -51,13 +45,8 @@
           </div>
 
           <div class="form-group">
-             <%= f.submit "Create my account", class: "btn btn-block btn-danger " %>
+             <%= f.submit "Update Account", class: "btn btn-block btn-danger " %>
           </div>
         <% end %>
 
-        <p class="text-center text-muted small-2">Already a member? <%= link_to 'Login here', login_path %></p>
       </div>
-
-</main><!-- /.main-content -->
-</div>
-</section>

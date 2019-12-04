@@ -1,11 +1,107 @@
-<h1> <%=@party.name%></h1>
-<h2> <%= @party.pitch%></h2>
-<br> 
-<%=link_to vote_party_path ,"Vote for this party"%>
+    <%= render '/layouts/party-nav'%>
+    <%= render '/layouts/notice' %>
 
-Founded: <%= @party.year%><br>
-<%=link_to @party.website, "Web"%><br>
-<%=link_to @party.twitter, "Twitter"%><br>
-<h3> Manifesto for 2019 Decemeber Election</h3><br>
-<%=@party.manifesto%>
+    <!-- Header -->
+    <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #0439D9 0%, #0439D9 48%, #0439D9 100%);">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <%= render '/layouts/notice' %>
+
+            <h1> <%=@party.name%> </h1>
+            <p> <%= @party.pitch%></p>
+            <hr class='w-100px'>
+            <p class="lead-2 opacity-90 mt-3">Founded: <%= @party.year%> | <%=link_to "Web", @party.website %> | <%=link_to "Twitter", @party.twitter %><br>
+            </p>
+            
+
+          </div>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="section bg-gray">
+        <div class="container">
+          <div class="row">
+
+
+            <div class="col-md-8 col-xl-9">
+                <h3> Manifesto for 2019 Decemeber Election</h3><br>
+                <p><%=@party.manifesto%></p>
+                <%=link_to "Vote for this party", vote_party_path, class: 'btn btn-block btn-round btn-success mt-3'%>
+                <p>Note you can only vote once and for one party only</p>
+                <br><br>
+                Leave a comment: 
+                <%=form_with(url: "/comments", method: :post) do |f| %>
+                    <div class="form-group">
+                        <%= f.text_area :text, class: 'form-control' %>
+                     </div>
+                     <div class="form-group">
+                        <%= f.submit "Comment", class: "btn btn-block btn-danger" %>
+                    </div>
+                <%end%>
+
+</div>
+
+            <div class="col-md-4 col-xl-3">
+              <div class="sidebar px-4 py-md-0">
+
+                <h6 class="sidebar-title">Latest Comments</h6>
+               
+
+                <hr>
+
+
+                <h6 class="sidebar-title">In the News</h6>
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/4.jpg">
+                  <p class="media-body small-2 lh-4 mb-0">Thank to Maryam for joining our team</p>
+                </a>
+
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/3.jpg">
+                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
+                </a>
+
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/5.jpg">
+                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
+                </a>
+
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <img class="rounded w-65px mr-4" src="../assets/img/thumb/2.jpg">
+                  <p class="media-body small-2 lh-4 mb-0">Maybe the best debates in the history of election.</p>
+                </a>
+
+                <hr>
+
+                <h6 class="sidebar-title">Groups</h6>
+                <div class="gap-multiline-items-1">
+                  <a class="badge badge-secondary" href="#">Youths</a>
+                  <a class="badge badge-secondary" href="#">Women</a>
+                  <a class="badge badge-secondary" href="#">LGBT</a>
+                  <a class="badge badge-secondary" href="#">Money Bag</a>
+                  <a class="badge badge-secondary" href="#">Londoner</a>
+                  <a class="badge badge-secondary" href="#">New Voters</a>
+                  <a class="badge badge-secondary" href="#">First Time Voters</a>
+                  
+                </div>
+
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</main>
+
+
+
 

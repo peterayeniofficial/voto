@@ -1,0 +1,32 @@
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
+      <div class="container">
+
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
+          <a class="navbar-brand" href="#">
+
+            <%= image_tag "logo.png", class: 'logo-light' %>
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <span class="navbar-divider d-mobile-none"></span>
+
+          <ul class="nav nav-navbar">
+
+            <li class="nav-item">
+              <%= link_to 'Sign Up', new_user_path, class: "nav-link"  %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Log In', login_path, class: "nav-link"  %>
+            </li>
+
+          </ul>
+        </section>
+
+        <a class="btn btn-xs btn-round btn-success" href="#">Insights</a>
+
+      </div>
+    </nav>

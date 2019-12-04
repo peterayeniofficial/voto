@@ -1,0 +1,54 @@
+<%= render '/layouts/party-nav'%>
+<!-- Header -->
+    <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #0439D9 0%, #0439D9 48%, #0439D9 100%);">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <%= render '/layouts/notice' %>
+
+            <h1>All Contesting Parties</h1>
+
+          </div>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <section class="section bg-gray p-0">
+        <div class="container">
+          <div class="row">
+          <div class="col-md-10 col-xl-9 mx-auto">
+            <% @parties.each do |party| %>
+            
+              <div class="card hover-shadow-7 my-8">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="blog-single.html">
+                        <%= image_tag party.logo, class: "fit-cover position-absolute h-100" %>
+                    </a>
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="p-7">
+                      <h4><%= party.name %></h4>
+                      <p><%= party.pitch %></p>
+                      <a class="small ls-1" ><%= link_to "Read More", party_path(party) %><span class="pl-1">&xrarr;</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <% end %>
+            </div>
+
+          </div>
+        </div>
+      </section>
+ </main>
+
+

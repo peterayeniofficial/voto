@@ -4,7 +4,7 @@
 
         <div class="navbar-left">
           <button class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
 
             <%= image_tag "logo.png", class: 'logo-light' %>
           </a>
@@ -14,20 +14,21 @@
           <span class="navbar-divider d-mobile-none"></span>
 
           <ul class="nav nav-navbar">
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign Up</span></a>
+             <li class="nav-item">
+              <%= link_to "Welcome #{current_user.first_name}", "#", class: "nav-link" %>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Log In</span></a>
+              <%= link_to 'Profile', user_path(current_user), class: "nav-link"  %>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Pages</span></a>
+              <%= link_to 'Parties', parties_path, class: "nav-link"  %>
             </li>
 
-            
+            <li class="nav-item">
+                <%= link_to 'Log Out', login_path, method: :delete, class: "nav-link" %>
+            </li>
 
           </ul>
         </section>
@@ -35,4 +36,4 @@
         <a class="btn btn-xs btn-round btn-success" href="#">Insights</a>
 
       </div>
-    </nav>
+</nav>
