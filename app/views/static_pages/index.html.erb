@@ -5,22 +5,67 @@
       <div class="container position-static">
         <div class="row align-items-center h-100">
 
-          <div class="col-lg-7">
+        
+           <div class="col-lg-7">
             <h1 class="display-6 fw-200">Know your Candidate <br> Make your voice heard…</h1>
-            <div class="row gap-y">
-            <div class="col-md-6 col-lg-3 team-1">
-              <a href="#">
-                <%= image_tag 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Official_portrait_of_Jo_Swinson_crop_2.jpg/800px-Official_portrait_of_Jo_Swinson_crop_2.jpg' %>
-              </a>
-              <h6><%= @leader.name %></h6>
-              <small><%= @leader.party.name %></small>
-      
-            </div>
-          </div>
-            <a class="btn btn-xl btn-round btn-outline-light w-300 px-6" href="#section-demo">Get Started</a>
+              <div class="row gap-y">
+                <% @leaders.each do |leader| %>
+                  <div class="col-md-6 col-lg-3 team-1">
+                    <a href="#">
+                      <%= image_tag leader.picture %>
+                    </a>
+                    <h6><%= leader.name %></h6>
+                    <small><%= leader.party.name %></small>
+            
+                  </div>
+                <% end %>
+              </div>
+            
+            <%= link_to 'Get Started', login_path, class: "red-btn btn btn-xl btn-round btn-outline-light w-300 px-6"  %>
           </div>
 
-          
+          <div class="col-lg-4 col-xl-3">
+              <div class="sidebar px-4 py-md-0">
+
+                <h6 class="sidebar-title">Current Polling</h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 85%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Green Party</div>
+                </div>
+
+                  <br>
+
+                 <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Liberal Democrats</div>
+                </div>
+
+                  <br>
+                 <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 35%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Concervative Party</div>
+                </div>
+
+                  <br>
+                 <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Labour Party</div>
+                </div>
+
+                  <hr>
+
+                <h6 class="sidebar-title">Developers</h6>
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <%= image_tag "fangfei.png", class: "rounded w-65px mr-4" %>
+                  <p class="media-body small-2 lh-4 mb-0">
+                    Fangfei
+                  </p>
+                </a>
+
+                <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                  <%= image_tag "peterayeni.png", class: "rounded w-65px mr-4" %>
+                  <p class="media-body small-2 lh-4 mb-0">
+                    Peter Ayeni
+                  </p>
+                </a>
+              </div>
+          </div>
 
         </div>
       </div>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .red-btn {
+     background-color: #F20732;
+ }
+
+ .sign-up-page  {
+    background-image: url(signup-bg.png);
+ }
+
+ .login-page {
+    background-image: url(login-bg.png);
+    height: 100vh;
+ }

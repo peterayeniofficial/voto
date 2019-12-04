@@ -2,8 +2,7 @@ class PartiesController < ApplicationController
     before_action :logged_in_user
     
     def index
-        @parties=Party.all
-
+        @parties = Party.all
     end 
 
     def show

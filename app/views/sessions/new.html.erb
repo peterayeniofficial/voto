@@ -1,10 +1,33 @@
-<h1> Welcome back! <br>
-Please log in with your email address and password</h1> 
-<br>
-<%=form_with(url: "sessions#create", method: "post") do |f|%>
-    <%=f.label :email%><br>
-    <%=f.text_field "user[email]"%><br><br>
-    <%=f.label :password%><br>
-    <%=f.password_field "user[password]"%><br><br>
-    <%=f.submit "Login"%>
-<%end%>
+<section class="login-page section">
+<div class="container">
+  <!-- Main Content -->
+<main class="main-content layout-centered">
+    <% if flash[:notice] %>
+      <h3><%= flash[:notice]%></h3>
+    <% end %>
+
+      <div class="bg-white rounded shadow-7 w-400 mw-100 p-6">
+        <h5 class="mb-7">Login</h5>
+
+        <%=form_with(url: '/login', method: "post") do |f|%>
+          <div class="form-group">
+            <%=f.label :email%><br>
+            <%=f.text_field "user[email]", class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field "user[password]", class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+             <%= f.submit "Login", class: "btn btn-block btn-danger" %>
+          </div>
+        <% end %>
+
+        <p class="text-center text-muted small-2">Don't have an account? <%= link_to 'Signup here', new_user_path %></p>
+      </div>
+
+</main><!-- /.main-content -->
+</div>
+</section>

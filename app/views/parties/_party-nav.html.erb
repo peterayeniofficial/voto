@@ -14,13 +14,20 @@
           <span class="navbar-divider d-mobile-none"></span>
 
           <ul class="nav nav-navbar">
-
-            <li class="nav-item">
-              <%= link_to 'Sign Up', new_user_path, class: "nav-link"  %>
+             <li class="nav-item">
+              <%= link_to "Welcome #{current_user.first_name}", "#", class: "nav-link" %>
             </li>
 
             <li class="nav-item">
-              <%= link_to 'Log In', login_path, class: "nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user), class: "nav-link"  %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to 'Parties', parties_path, class: "nav-link"  %>
+            </li>
+
+            <li class="nav-item">
+                <%= link_to 'Log Out', login_path, method: :delete, class: "nav-link" %>
             </li>
 
           </ul>
@@ -29,4 +36,4 @@
         <a class="btn btn-xs btn-round btn-success" href="#">Insights</a>
 
       </div>
-    </nav>
+</nav>
