@@ -3,9 +3,7 @@
 <div class="container">
   <!-- Main Content -->
 <main class="main-content layout-centered">
-    <% if flash[:notice] %>
-      <h3><%= flash[:notice]%></h3>
-    <% end %>
+      <%= render '/layouts/notice' %>
 
       <div class="bg-white rounded shadow-7 w-400 mw-100 p-6">
         <h5 class="mb-7">Login</h5>

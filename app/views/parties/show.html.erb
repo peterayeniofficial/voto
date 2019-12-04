@@ -1,4 +1,5 @@
     <%= render '/layouts/party-nav'%>
+    <%= render '/layouts/notice' %>
 
     <!-- Header -->
     <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #0439D9 0%, #0439D9 48%, #0439D9 100%);">
@@ -6,6 +7,7 @@
 
         <div class="row">
           <div class="col-md-8 mx-auto">
+            <%= render '/layouts/notice' %>
 
             <h1> <%=@party.name%> </h1>
             <p> <%= @party.pitch%></p>

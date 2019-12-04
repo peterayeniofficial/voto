@@ -26,3 +26,7 @@
     background-image: url(login-bg.png);
     height: 100vh;
  }
+
+ .notice {
+   z-index: 999;
+ }
