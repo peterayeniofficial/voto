@@ -1,15 +1,15 @@
 class CommentsController < ApplicationController
 
     def create
-        @party_id = params[:id]
-        comment = Comment.create(user_id:session[:user_id], party_id: @party_id, text:comment_params)
-        render parties_path
+        
+        @party_id = Party.find(params[:party_id])
+        @comment = Comment.new(user_id: session[:user_id], party_id: params[:party_id], text: params[:text])
+        if @comment.save
+            flash.now[:notice]= "Thank you, comment added"
+            redirect_to party_path(@party_id)
+        else
+            redirect_to party_path(@party_id)
+        end
     end
 
-
-    private
-
-    def comment_params 
-        params.permit(:text)
-    end 
 end
