@@ -9,15 +9,18 @@ class PartiesController < ApplicationController
         current_party
     end 
 
+
     def vote
         current_party
         vote=Voting.new(party_id: @party.id, user_id: session[:user_id])
-        if vote.save
+        byebug
+        if @vote.save
             redirect_to insight_path 
         else
             render :index
         end
     end
+
 
   
 
