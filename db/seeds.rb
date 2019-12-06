@@ -370,3 +370,303 @@ leaders = Leader.create(
         }
     ]
    )
+
+gender = ["Male", "Female", "Other"]
+date = ["1990-06-13", "2002-06-13", "2001-06-13", "2003-06-13", "1999-06-13", "1994-06-13", "1989-06-13", "1979-06-13", "1969-06-13"]
+
+66.times do 
+    
+    User.create(
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
+        email: Faker::Internet.email,
+        dob: date.sample,
+        gender: gender.sample,
+        password: "password",
+        password_confirmation: "password",
+        council_id: Council.all.sample.id
+    )
+
+    
+end
+
+  
+
+votings = Voting.create([
+    {
+        party_id: 1,
+        user_id: 2
+    },
+    {
+        party_id: 1,
+        user_id: 3
+    },
+    {
+        party_id: 1,
+        user_id: 4
+    },
+    {
+        party_id: 1,
+        user_id: 5
+    },
+    {
+        party_id: 1,
+        user_id: 6
+    },
+    {
+        party_id: 1,
+        user_id: 7
+    },
+    {
+        party_id: 1,
+        user_id: 8
+    },
+    {
+        party_id: 1,
+        user_id: 9
+    },
+    {
+        party_id: 2,
+        user_id: 10
+    },
+    {
+        party_id: 2,
+        user_id: 11
+    },
+    {
+        party_id: 2,
+        user_id: 12
+    },
+    {
+        party_id: 2,
+        user_id: 13
+    },
+    {
+        party_id: 2,
+        user_id: 14
+    },
+    {
+        party_id: 2,
+        user_id: 15
+    },
+    {
+        party_id: 2,
+        user_id: 16
+    },
+    {
+        party_id: 2,
+        user_id: 17
+    },
+    {
+        party_id: 2,
+        user_id: 18
+    },
+    {
+        party_id: 2,
+        user_id: 19
+    },
+    {
+        party_id: 2,
+        user_id: 20
+    },
+    {
+        party_id: 2,
+        user_id: 21
+    },
+    {
+        party_id: 2,
+        user_id: 22
+    },
+    {
+        party_id: 2,
+        user_id: 23
+    },
+    {
+        party_id: 2,
+        user_id: 24
+    },
+    {
+        party_id: 2,
+        user_id: 25
+    },
+    {
+        party_id: 2,
+        user_id: 26
+    },
+    {
+        party_id: 2,
+        user_id: 27
+    },
+    {
+        party_id: 2,
+        user_id: 28
+    },
+    {
+        party_id: 2,
+        user_id: 29
+    },
+
+    {
+        party_id: 2,
+        user_id: 30
+    },
+    {
+        party_id: 2,
+        user_id: 31
+    },
+
+    {
+        party_id: 2,
+        user_id: 32
+    },
+
+    {
+        party_id: 2,
+        user_id: 33
+    },
+    {
+        party_id: 2,
+        user_id: 34
+    },
+
+    {
+        party_id: 2,
+        user_id: 35
+    },
+
+    {
+        party_id: 2,
+        user_id: 36
+    },
+
+    {
+        party_id: 2,
+        user_id: 37
+    },
+    {
+        party_id: 2,
+        user_id: 38
+    },
+    {
+        party_id: 2,
+        user_id: 39
+    },
+    {
+        party_id: 2,
+        user_id: 40
+    },
+
+    {
+        party_id: 3,
+        user_id: 41
+    },
+    {
+        party_id: 3,
+        user_id: 42
+    },
+    {
+        party_id: 3,
+        user_id: 43
+    },
+    {
+        party_id: 3,
+        user_id: 44
+    },
+    {
+        party_id: 3,
+        user_id: 45
+    },
+    {
+        party_id: 3,
+        user_id: 46
+    },
+    {
+        party_id: 3,
+        user_id: 47
+    },
+    {
+        party_id: 3,
+        user_id: 48
+    },
+    {
+        party_id: 3,
+        user_id: 49
+    },
+    {
+        party_id: 3,
+        user_id: 50
+    },
+    {
+        party_id: 3,
+        user_id: 51
+    },
+
+    {
+        party_id: 4,
+        user_id: 52
+    },
+    {
+        party_id: 4,
+        user_id: 53
+    },
+    {
+        party_id: 4,
+        user_id: 54
+    },
+    {
+        party_id: 4,
+        user_id: 55
+    },
+   
+    {
+        party_id: 5,
+        user_id: 56
+    },
+    {
+        party_id: 5,
+        user_id: 57
+    },
+    {
+        party_id: 5,
+        user_id: 58
+    },
+    {
+        party_id: 5,
+        user_id: 59
+    },
+    {
+        party_id: 5,
+        user_id: 60
+    },
+    {
+        party_id: 6,
+        user_id: 61
+    },
+    {
+        party_id: 6,
+        user_id: 62
+    },
+    {
+        party_id: 6,
+        user_id: 63
+    },
+    {
+        party_id: 7,
+        user_id: 64
+    },
+    {
+        party_id: 7,
+        user_id: 65
+    },
+    {
+        party_id: 8,
+        user_id: 66
+    },
+    {
+        party_id: 8,
+        user_id: 67
+    }
+    
+    
+
+])

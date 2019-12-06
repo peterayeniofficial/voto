@@ -7,7 +7,6 @@ class PartiesController < ApplicationController
 
     def show
         current_party
-        @comment = Comment.new
     end 
 
     def vote
