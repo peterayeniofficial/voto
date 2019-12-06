@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  dob: 2019-12-02
-  gender: MyString
-  password_digest: MyString
-  council_id: 1
+# one:
+#   first_name: MyString
+#   last_name: MyString
+#   email: MyString
+#   dob: 2019-12-02
+#   gender: MyString
+#   password_digest: MyString
+#   council_id: 1
 
-two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  dob: 2019-12-02
-  gender: MyString
-  password_digest: MyString
-  council_id: 1
+# two:
+#   first_name: MyString
+#   last_name: MyString
+#   email: MyString
+#   dob: 2019-12-02
+#   gender: MyString
+#   password_digest: MyString
+#   council_id: 1

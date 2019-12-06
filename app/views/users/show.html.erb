@@ -1,3 +1,50 @@
-<h1>Welcome <%= @user.first_name %></h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= link_to 'Log Out', login_path, method: :delete  %>
+    <%= render '/layouts/party-nav'%>
+
+    <!-- Header -->
+    <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #0439D9 0%, #0439D9 48%, #0439D9 100%);">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+
+            <h1>Welcome <%= @user.first_name %></h1>
+            <hr class='w-100px'>
+            <p class="lead-2 opacity-90 mt-3">Profile</p>
+            
+
+          </div>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="section bg-gray">
+        <div class="container">
+          <div class="row">
+
+
+            <div class="col-md-7 ">
+                <h3> Your Party</h3><br>
+                 <h3> Your Comments</h3><br>
+
+</div>
+
+            <div class="col-md-5 ">
+              <div class="sidebar px-4 py-md-0">
+
+                <h6 class="sidebar-title">Update Profile</h6>
+                <%= render 'form' %>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</main>
+
+
