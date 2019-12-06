@@ -1,25 +1,3 @@
-# README
-__This is a test___
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Voto
 
-Things you may want to cover: Work In Develop
-
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Voto is a Civic Tech Web application to get citizen opinion on Elections. Full Stack Web App Develop with Ruby on Rails.
