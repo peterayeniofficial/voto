@@ -1,1 +1,78 @@
-<h1> Insight</h1> 
+<%=render '/layouts/home-nav'%>
+
+
+<!-- Header -->
+    <header class="header text-white h-fullscreen overflow-hidden" style="background-color: #0439D9;">
+      <canvas class="constellation" data-radius="0"></canvas>
+      <%= render '/layouts/notice' %>
+
+
+    <div class="container position-static" >
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8" >
+                <p class="text-lg-center text-uppercase font-weight-bold">General Polling </p>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@plaid.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@plaid.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@conservative.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@conservative.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Labour.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Labour.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Liberal_Democrats.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Liberal_Democrats.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Green.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Green.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Braxit.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Braxit.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@SNP.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@SNP.name%></div>
+                    </div>
+                <div class="progress-bar" style="hight: 8px;">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Democratic_Unionist.percentage%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Democratic_Unionist.name%></div>
+                    </div>
+            </div>
+        </div>
+       
+
+        
+        <div class="col-md-4">
+            <p class="text-lg-center text-uppercase font-weight-bold">Female Voter Poll  </p>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@plaid.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@plaid.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@conservative.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@conservative.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Labour.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Labour.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Liberal_Democrats.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Liberal_Democrats.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Green.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Green.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Braxit.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Braxit.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@SNP.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@SNP.name%></div>
+                </div>
+            <div class="progress-bar" style="hight: 8px;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@Democratic_Unionist.female_voter%>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%=@Democratic_Unionist.name%></div>
+                </div>
+        </div>
+
+        <div class="col-md-4">
+        </div>
+
+        <div class="col-md-4">
+        </div>
+
+
+    </div>  

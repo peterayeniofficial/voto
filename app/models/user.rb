@@ -26,4 +26,7 @@ class User < ApplicationRecord
             errors.add(:birth_date, 'You should be over 16 years old.')
         end
     end
+
+  
+   
 end
