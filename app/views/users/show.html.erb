@@ -27,8 +27,31 @@
 
 
             <div class="col-md-7 ">
-                <h3> Your Party</h3><br>
-                 <h3> Your Comments</h3><br>
+                <h3> Your Party</h3>
+                  <% if current_user.voting.nil? %>
+                    <p>Currently you are not supporting any contesting party. 
+                    <br>Please consider: 
+                    <br>
+                    <br>
+                    <%= link_to 'Contesting Parties', parties_path, class: "red-btn btn btn-s btn-round btn-outline-light w-300 px-6" %>
+                    <p>
+                  <% else %>
+                    <p>You voted for: <%= link_to current_user.party_name, party_path(current_user.party) %></p>
+                  <% end %>
+                  <hr>
+                 <h3> Your Comments</h3>
+                  <% if current_user.comments.empty? %>
+                    <p>You haven't left any comment.
+                    <br>
+                    We would love to hear from you. <%= link_to 'Parties', parties_path%> 
+                    </p>
+                  <% else %>
+                    <% current_user.comments.each do |comment| %>
+                    <p><%= comment.text %></p>
+                    <p>For: <%= comment.party.name %> | Posted: <%= time_ago_in_words(comment.created_at) %> ago.</p>
+                    <hr>
+                  <% end%>
+                  <% end %>
 
 </div>
 
