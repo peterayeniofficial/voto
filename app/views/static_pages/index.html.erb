@@ -31,24 +31,24 @@
               <div class="sidebar px-4 py-md-0">
 
                 <h6 class="sidebar-title">Current Polling</h6>
+                <p class="mb-0"><%= @green.name %></p>
                 <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 85%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Green Party</div>
+                  <div class="color-<%= @green.name %> progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <%= @green.percentage %>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%= @green.name %></div>
                 </div>
 
-                  <br>
-
+               
+                <p class="mb-0"><%= @liberal.name %></p>
                  <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Liberal Democrats</div>
+                  <div class="color-<%= @liberal.name %> progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <%= @liberal.percentage %>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%= @liberal.name %></div>
+                </div>
+                <p class="mb-0"><%= @conservative.name %></p>
+                 <div class="progress">
+                  <div class="color-<%= @conservative.name %> progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 35%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%= @conservative.name %></div>
                 </div>
 
-                  <br>
+                <p class="mb-0"><%= @labour.name %></p>
                  <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 35%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Concervative Party</div>
-                </div>
-
-                  <br>
-                 <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Labour Party</div>
+                  <div class="color-<%= @labour.name %> progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <%= @labour.percentage %>%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><%= @labour.name %></div>
                 </div>
 
                   <hr>
