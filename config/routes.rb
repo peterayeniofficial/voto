@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index]
 
   resources :parties, only: [:index, :show]
-  post "/parties/:id", to: "parties#vote", as: "vote_party"
+  post "/votings", to: "votings#create", as: "voting"
   post "/comments", to:"comments#create", as:"comment"
 
   

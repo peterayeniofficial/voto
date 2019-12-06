@@ -42,7 +42,13 @@
                 <p><%=@party.manifesto%></p>
                 <hr>
                 <% unless current_user.voting %>
-                  <%=link_to "Vote for this party", vote_party_url, method: :post, class: 'btn btn-block btn-round btn-success mt-3'%>
+                  <%=form_with(url: "/votings", method: :post) do |f| %>
+                  
+                     <%= hidden_field_tag 'party_id', @party.id %>
+                     <div class="form-group">
+                        <%= f.submit "Vote", class: "btn btn-block btn-round btn-success mt-3" %>
+                    </div>
+                <%end%>
                   <p>Note you can only vote once and for one party only</p>
                 <% end %>
                 <div class="card hover-shadow-7 my-4 p-2">
