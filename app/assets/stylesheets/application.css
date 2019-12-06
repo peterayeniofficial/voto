@@ -32,3 +32,41 @@
  .notice {
    z-index: 999;
  }
+
+ .color-Conservatives {
+   background-color:#0AB9FB!important;
+}
+
+.color-Labour {
+  background-color: #F20000!important;
+
+}
+
+.color-Liberal {
+  background-color: #FFBB00!important;
+}
+
+.color-Green{
+  background-color: #4DC000!important;
+
+}
+
+.color-Brexit {
+  background-color: #03C1DB!important;
+
+}
+
+.color-Scottish {
+  background-color: #3A3A3A!important;
+
+}
+
+.color-Plaid {
+  background-color: #8BC07F!important;
+
+}
+
+.color-Democratic {
+  background-color: #DF0015!important;
+
+}
